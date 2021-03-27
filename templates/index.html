@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produtos</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Produtos<h1>
+    <form action="/create" method="POST">
+      <input name="title" placeholder="Nome">
+      <input name="price" placeholder="Preço">
+      <button type="submit">
+        <img src="{{ url_for('static', filename='images/icons/plus.png') }}"/>
+      </button>
+    </form>
+    <ul>
+      {% for product in products %}
+        <li>
+          <form action="/update/{{ product[0] }}" method="POST">
+            <input type="text" value="{{ product[1] }}" name="title">
+            <input type="text" value="R$ {{ product[2] }}" name="price">
+            <button type="submit">
+              <img src="{{ url_for('static', filename='images/icons/edit.png') }}"/>
+            </button>
+          </form>
+          <a href="/delete/{{ product[0] }}">
+            <img src="{{ url_for('static', filename='images/icons/delete.png') }}"/>
+          </a>
+
+        </li>
+      {% endfor %}
+      <p class="info">Clique no nome ou no preço do produto para editar</p>
+    </ul>
+    <form action="/search" method="POST">
+      <input name="search" placeholder="Buscar produto">
+      <button type="submit">
+        <img src="{{ url_for('static', filename='images/icons/search.png') }}"/>
+      </button>
+    </form>
+  </div>
+</body>
+</html>

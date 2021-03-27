@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produtos</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Registrar<h1>
+    <form action="/signup" method="POST">
+      <input name="name" placeholder="Nome">
+      <br>
+      <input type="email" name="email" placeholder="E-mail">
+      <br>
+      <input type="password" name="password" placeholder="Senha">
+      <br>
+      <button type="submit" id="login-button">
+        <span>REGISTRAR<img class="img-login" style="margin-left: 15px" src="{{ url_for('static', filename='images/icons/right-arrow.png') }}"/></span>
+      </button>
+    </form>
+  </div>
+</body>
+</html>

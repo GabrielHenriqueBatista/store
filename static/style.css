@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('images/bg_loja.png');
+  background-position: center;
+  background-size: cover;
+  font-family: 'OCR A Std', monospace;
+  color: rgb(236, 236, 236);
+  font-size: 18px;
+  line-height: 1.5
+}
+
+.container{
+  background: #110453;
+  width: 500px;
+  max-width: 100%;
+  max-height: 80%;
+  overflow: auto;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(148, 22, 22, 0.5)
+}
+
+.container a{
+  text-decoration: none;
+}
+
+.container h1{
+  text-align: center;
+  margin-bottom: 10px;
+  color: #cecece;
+}
+
+.container > form{
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.container li{
+  transition: transform .2s;
+  color: #FFFF;
+  background-color: #3f366d;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.7);
+  list-style: none;
+  text-align: left;
+  padding: 10px 10px;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 9px 0;
+  border-radius: 10px
+}
+
+.container li:hover {
+  transform: scale(1.05); 
+}
+
+.container input{
+  font-family: 'DejaVu Sans Mono', monospace;
+  background-color: #3f366d;
+  color: #cecece;
+  padding: 4px;
+  border: none;
+}
+
+.container input:focus{
+  outline: none;
+  border-bottom: 1px solid #AAA
+}
+
+.container form button{
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+#login-button {
+  transition: transform .2s;
+  background-color: #3f366d;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  width: 150px;
+  cursor: pointer;
+  margin: 10px;
+  padding: 10px;
+}
+#login-button:hover{
+  transform: scale(1.2);
+}
+#button{
+  transition: transform .2s;
+  background-color: #3f366d;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  width: 150px;
+  cursor: pointer;
+  margin: 10px;
+  padding: 10px;
+}
+
+.container img{
+  transition: transform .2s;
+  width: 25px;
+  margin-bottom: -5px
+}
+
+.img-login{
+  height: 20px;
+}
+
+.container img:hover {
+  transform: scale(1.3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.completed{
+  text-decoration: line-through
+}
+
+.info{
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 11px
+}
